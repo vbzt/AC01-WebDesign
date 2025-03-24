@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-style: normal;
+  font-family: "Work sans";
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  resize: none;
+  outline: none;
+  border: 0;
+  color: var(--corTexto);
+  scroll-behavior: smooth;
+}
+
+:root{ 
+  --black: #00040F;
+  --corTexto: #e4e4e4;
+}
+
+.colored{ 
+  color: var(--colored)
+}
+
+main{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--black);
+  gap: 5cqh;
+}
+
+.add-task{ 
+  display: flex;
+  align-items: center;
+  padding: 1.2cqh;
+  gap: 1cqh;
+  width: 35%;
+  height: 60px;
+  border-radius: 7px;
+  background-color: #e4e4e4;
+}
+
+.input-container{ 
+  display: flex;
+  flex-direction: column;
+  padding: 1.2cqh;
+  width: 100%;
+}
+
+.input-container input{ 
+  font-size: 2cqh;
+  padding: 1cqh;
+  width: 40%;
+  background-color: transparent;
+  color: #00040F9f;
+  font-weight: 500;
+  border-bottom: 1px solid var(--black);
+}
+
+.input-container input:focus{ 
+  color: var(--black);
+}
+
+.add-task button{ 
+  color: var(--black);
+  width: auto;
+  font-size: 3cqh;
+  border: 1px solid var(--black);
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.list{ 
+  width: 35%;
+  background-color: #e4e4e4;
+  border-radius: 7px;
+  padding: 0;
+  min-height: 0cqh;
+  
+}
+
+.task-wrapper{
+  display: flex; 
+  gap: 2.5cqh;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+
+.task-wrapper li{
+  display: flex; 
+  width: 100%;
+  padding: 1.5cqh 0;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--black);
+  & p{
+    color: var(--black);
+    font-weight: 500;
+  }
+}
+
+.task-wrapper li .options{ 
+  display: flex;
+  gap: 1.5cqh;
+
+  & p{ 
+    cursor: pointer;
+    color: #00040F9f;
+    font-size: 2cqh;
+  }
+}
+
+.concluded{ 
+  text-decoration: line-through;
+}
+
