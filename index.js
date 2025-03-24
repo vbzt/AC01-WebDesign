@@ -15,11 +15,11 @@ const addTask = (taskText) => {
     li.innerHTML = `
         <p>${taskText}</p>
         <div class="options">
-            <p class="done">Concluir</p>
-            <p class="remove">Excluir</p>
+            <p class="done">Conclude</p>
+            <p class="remove">Delete</p>
         </div>
     `
-    
+
     li.querySelector('.options').addEventListener('click', () => {
         console.log('asd')
         li.querySelector('p').classList.toggle('concluded')
@@ -28,12 +28,12 @@ const addTask = (taskText) => {
     li.querySelector('.remove').addEventListener('click', () => {
         taskList.removeChild(li)
         if (taskList.children.length === 0) {
-          taskList.style.padding = '0'
-     }
+            taskList.style.padding = '0'
+        }
     })
 
     if (taskList.children.length === 0) {
-         taskList.style.padding = '2.2cqh'
+        taskList.style.padding = '2.2cqh'
     }
 
     taskList.appendChild(li)
